@@ -1,0 +1,11 @@
+<h1>Add note</h1>
+<form [formGroup]="noteForm" (ngSubmit)="submitForm()">
+    <input type="text" placeholder="Title" formControlName="title"/>
+    <input type="text" placeholder="Content" formControlName="content"/>
+    <div class="d-grid">
+        <button type="submit" [disabled]="noteForm.invalid">Add</button>
+    </div>
+    <div *ngIf="error" class="error-message">
+        {{ error }}
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<h1>Create new module</h1>
+<form [formGroup]="moduleForm" (ngSubmit)="submitForm()">
+    <input type="text" placeholder="Name" formControlName="name" class="form-control" />
+    <input type="text" placeholder="Description" formControlName="description" class="form-control" />
+    <div class="d-grid">
+        <button type="submit" [disabled]="moduleForm.invalid">Create</button>
+    </div>
+    <div *ngIf="error" class="error-message">
+        {{ error }}
+    </div>
+</form>

@@ -1,0 +1,7 @@
+<a routerLink='/create-module' routerLinkActive="active">Create new module</a>
+<div class="modules-grid">
+    <app-module-card
+        *ngFor="let module of modules"
+        [module]="module">
+    </app-module-card>
+</div>
