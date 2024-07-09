@@ -2,10 +2,23 @@
     border: 1px solid #ccc;
     padding: 16px;
     margin: 8px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    border: 3px solid #1f242b;
+    background: #161b22;
+    color: antiquewhite;
+    height: 200px;
 }
 
 .module-card h3 {
-    margin-top: 0;
+    color: #e6edf3;
+    font-size: 30px;
+}
+
+.module-card p {
+    color: #8d96a0;
+}
+
+.module-card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }

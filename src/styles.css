@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: #010409;
+    font-family: 'Amethysta', sans-serif;
+    font-size: 20px;
+    color: antiquewhite;
+
+}
