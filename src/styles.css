@@ -1,3 +1,7 @@
+:root {
+    --line-color: #30363d
+}
+
 * {
     box-sizing: border-box;
 }
@@ -24,6 +28,6 @@ body {
     background-color: #010409;
     font-family: 'Amethysta', sans-serif;
     font-size: 20px;
-    color: antiquewhite;
+    color: white;
 
 }

@@ -1,7 +1,12 @@
+.module-grid-container {
+    width: 70%;
+}
+
 .modules-grid {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
     padding: 16px;
 }
 
