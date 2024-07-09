@@ -1,8 +1,7 @@
-.module-form-container {
+:host {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 500px;
 }
 
 .form-container {
@@ -39,7 +38,6 @@ label {
     background: transparent;
     font-size: 19px;
     color: white;
-    width: 400px;
 }
 
 .form-control:focus {

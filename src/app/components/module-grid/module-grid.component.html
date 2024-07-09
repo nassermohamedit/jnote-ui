@@ -1,6 +1,4 @@
-<div class="module-grid-container">
-    <button routerLink='/create-module' routerLinkActive="active" class="green-button">New</button>
-    <div class="modules-grid">
-        <app-module-card *ngFor="let module of modules" [module]="module" />
-    </div>
+<button routerLink='/create-module' routerLinkActive="active" class="green-button">New</button>
+<div class="modules-grid">
+    <app-module-card *ngFor="let module of modules" [module]="module" />
 </div>

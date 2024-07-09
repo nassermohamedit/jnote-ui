@@ -3,13 +3,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModuleService } from '../../services/module.service';
-
 @Component({
   selector: 'app-create-module',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './create-module.component.html',
-  styleUrl: './create-module.component.css'
+  styleUrl: './create-module.component.css',
 })
 export class CreateModuleComponent {
 

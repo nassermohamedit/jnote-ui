@@ -1,4 +1,4 @@
-.module-grid-container {
+:host {
     width: 70%;
 }
 
