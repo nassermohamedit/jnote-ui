@@ -1,5 +1,4 @@
-
 <div class="note-list">
-    <app-add-note [moduleId]="moduleId"/>
+    <app-add-note [moduleId]="moduleId" (newNote)="addNewElement($event)"/>
     <app-note-card *ngFor="let note of notes" [note]="note"></app-note-card>
 </div>

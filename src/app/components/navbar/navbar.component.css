@@ -22,15 +22,13 @@ nav ul li {
     font-style: normal;
 }
 
-nav ul li.name {
-    margin-right: 35px;
-    color: azure;
-}
+
 
 nav ul li h1 {
     margin: 0;
     padding: 0;
-    font-size: 50px;
+    font-size: 40px;
+    color: rgb(1, 163, 1);
 }
 
 nav ul li a {

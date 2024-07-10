@@ -1,7 +1,9 @@
 :root {
-    --line-color: #30363d;
+    --line-color: rgb(0, 85, 0);
     --dark-color: #161b22;
-    --darkest-color: #010409;
+    --darkest-color: #161b22;
+    --text-font: "Roboto Mono", monospace;
+    --button-color: green;
 }
 
 * {

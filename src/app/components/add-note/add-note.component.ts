@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Note } from '../../data/note.model';
 import { ModuleService } from '../../services/module.service';
 
 @Component({
@@ -15,7 +16,10 @@ export class AddNoteComponent {
 
   noteForm: FormGroup;
   error: string = '';
+
   @Input() moduleId!: number;
+
+  @Output() newNote = new EventEmitter<Note>();
 
   constructor(private moduleService: ModuleService, private router: Router, fb: FormBuilder) {
     this.noteForm = fb.group({
@@ -27,7 +31,8 @@ export class AddNoteComponent {
     if (this.noteForm.valid) {
       this.moduleService.addNewNote(this.moduleId, this.noteForm.getRawValue()).subscribe(
         () => {
-          this.router.navigateByUrl(`/module/${this.moduleId}`);
+          this.newNote.emit(this.noteForm.getRawValue());
+          this.noteForm.reset();
         },
         error => {
           console.log('Failed to add note.', error);

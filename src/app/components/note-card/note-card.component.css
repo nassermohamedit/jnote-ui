@@ -9,11 +9,10 @@
 
 .title {
     font-weight: bold;
-    color: antiquewhite;
 }
 
 .content {
     font-size: 19px;
     line-height: 1.6;
-    font-family: "Roboto Mono", monospace;
+    font-family: var(--text-font);
 }

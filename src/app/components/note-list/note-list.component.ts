@@ -33,4 +33,8 @@ export class NoteListComponent implements OnInit {
       )
     }
   }
+
+  addNewElement(note: Note) {
+    this.notes.unshift(note);
+  }
 }
