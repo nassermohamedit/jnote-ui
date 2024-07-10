@@ -1,0 +1,50 @@
+:host {
+    border: 2px solid var(--line-color);
+    width: 100%;
+
+}
+
+.input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    height: 150px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Roboto Mono", monospace;
+}
+
+.note-form {
+    padding: 16px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.image-upload {
+    background-color: transparent;
+    color: green;
+    font-size: 20px;
+    padding: 0;
+}
+
+.error-message {
+    margin-top: 8px;
+}

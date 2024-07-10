@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ModuleService } from '../../services/module.service';
 
 @Component({
@@ -15,17 +15,12 @@ export class AddNoteComponent {
 
   noteForm: FormGroup;
   error: string = '';
-  moduleId: number = 0;
+  @Input() moduleId!: number;
 
-  constructor(private moduleService: ModuleService, private router: Router, private route: ActivatedRoute, fb: FormBuilder) {
+  constructor(private moduleService: ModuleService, private router: Router, fb: FormBuilder) {
     this.noteForm = fb.group({
-      title: ['', Validators.required],
       content: ['', Validators.required]
     })
-    const moduleId = this.route.snapshot.paramMap.get('moduleId')
-    if (moduleId != null) {
-      this.moduleId = parseInt(moduleId);
-    }
   }
 
   submitForm() {

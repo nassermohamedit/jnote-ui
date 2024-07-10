@@ -1,0 +1,19 @@
+:host {
+    margin: 0;
+    background: transparent;
+    border: 1px solid var(--line-color);
+    padding: 28px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+.content {
+    font-size: 19px;
+    line-height: 1.6;
+    font-family: "Roboto Mono", monospace;
+}

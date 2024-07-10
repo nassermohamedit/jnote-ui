@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Note } from '../../data/note.model';
 import { ModuleService } from '../../services/module.service';
+import { AddNoteComponent } from "../add-note/add-note.component";
 import { NoteCardComponent } from '../note-card/note-card.component';
 
 @Component({
   selector: 'app-note-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, NoteCardComponent],
+  imports: [CommonModule, RouterLink, NoteCardComponent, AddNoteComponent],
   templateUrl: './note-list.component.html',
   styleUrl: './note-list.component.css'
 })
