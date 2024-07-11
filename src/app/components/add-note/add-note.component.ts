@@ -30,8 +30,8 @@ export class AddNoteComponent {
   submitForm() {
     if (this.noteForm.valid) {
       this.moduleService.addNewNote(this.moduleId, this.noteForm.getRawValue()).subscribe(
-        () => {
-          this.newNote.emit(this.noteForm.getRawValue());
+        (note) => {
+          this.newNote.emit(note);
           this.noteForm.reset();
         },
         error => {
