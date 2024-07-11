@@ -2,7 +2,7 @@
     padding: 16px;
     margin: 8px;
     border-radius: 2px;
-    border: 2px solid var(--line-color);
+    border: 1px solid var(--line-color);
     background: transparent;
     color: antiquewhite;
     height: 200px;

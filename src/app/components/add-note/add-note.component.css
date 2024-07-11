@@ -1,5 +1,5 @@
 :host {
-    border: 2px solid var(--line-color);
+    border: 1px solid var(--line-color);
     width: 100%;
 
 }
@@ -31,11 +31,12 @@
 button {
     background-color: var(--button-color);
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 20px;
     padding: 8px 16px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 button.image-upload {

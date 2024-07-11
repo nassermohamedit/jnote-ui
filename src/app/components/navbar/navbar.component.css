@@ -4,7 +4,7 @@ nav {
     left: 0;
     width: 100%;
     padding: 20px;
-    border-bottom: 2px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
 }
 
 nav ul {
@@ -28,7 +28,7 @@ nav ul li h1 {
     margin: 0;
     padding: 0;
     font-size: 40px;
-    color: rgb(1, 163, 1);
+    color: var(--button-color);
 }
 
 nav ul li a {
