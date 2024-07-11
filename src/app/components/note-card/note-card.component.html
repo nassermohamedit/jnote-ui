@@ -1,2 +1,11 @@
-<p class="content">
-    <span class="title">{{ note.title }} </span>{{ note.content }}</p>
+<div class="sub-card">
+    <p class="content">{{ note.content }}</p>
+    <div class="menu-container">
+        <button class="menu-button" (click)="toggleMenu()">&#x22EE;</button>
+        <div class="dropdown-menu" *ngIf="menuOpen">
+            <div class="dropdown-item" (click)="editNote()">Edit</div>
+            <div class="dropdown-item" (click)="deleteNote()">Delete</div>
+        </div>
+    </div>
+</div>
+<div class="metadata">{{ formatTimestamp(note.creationTime) }}</div>

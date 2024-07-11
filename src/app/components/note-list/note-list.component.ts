@@ -37,4 +37,8 @@ export class NoteListComponent implements OnInit {
   addNewElement(note: Note) {
     this.notes.unshift(note);
   }
+
+  removeElement(index: number) {
+    this.notes.splice(index, 1);
+  }
 }
