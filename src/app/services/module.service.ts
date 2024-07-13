@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { Module } from '../data/module.model';
 import { Note } from '../data/note.model';
 
@@ -9,7 +10,7 @@ import { Note } from '../data/note.model';
 })
 export class ModuleService {
 
-  private apiUrl: string = "http://localhost:8080/";
+  private apiUrl: string = `${environment.backendUrl}`;
 
   constructor(private http: HttpClient) {}
 

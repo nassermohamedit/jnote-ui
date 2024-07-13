@@ -1,6 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { Token } from '../data/token';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Token } from '../data/token';
 })
 export class AuthService {
 
-  private authUrl: string = 'http://localhost:8080/auth/token';
+  private authUrl: string = `${environment.backendUrl}/auth/token`;
 
   authenticationSig = signal<boolean | undefined | null>(undefined);
 
