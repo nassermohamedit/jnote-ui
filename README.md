@@ -8,3 +8,6 @@ JNote is a note-taking application designed to boost my learning productivity an
 
 [JNote Chrome Extension](https://github.com/nassermohamedit/jnote-extension) A chrome extension to capture notes from any web page.
 
+## License
+
+JNote is licensed under the MIT License.
