@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { marked } from 'marked';
 import { Note } from '../../data/note.model';
 import { NoteService } from '../../services/note.service';
 
@@ -55,5 +56,9 @@ export class NoteCardComponent {
     const minutes = String(date.getMinutes()).padStart(2, '0');
   
     return `${year}-${month}-${day} ${hours}:${minutes}`;
+  }
+
+  mark(input: string) {
+    return marked.parse(input);
   }
 }

@@ -1,5 +1,5 @@
 <div class="sub-card">
-    <p class="content">{{ note.content }}</p>
+    <div class="content" [innerHTML]="mark(note.content)"></div>
     <div class="menu-container">
         <button class="menu-button" (click)="toggleMenu()">&#x22EE;</button>
         <div class="dropdown-menu" *ngIf="menuOpen">
