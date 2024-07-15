@@ -4,7 +4,7 @@
     border: 1px solid var(--line-color);
     padding: 28px;
     padding-bottom: 0;
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
     font-family: var(--text-font);
     box-shadow: 0 -1px 0 #000;
@@ -65,7 +65,7 @@
 }
 
 .content {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 0;
 }
