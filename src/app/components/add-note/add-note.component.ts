@@ -17,7 +17,7 @@ export class AddNoteComponent {
   noteForm: FormGroup;
   error: string = '';
 
-  @Input() moduleId!: number;
+  @Input() unitId!: number;
 
   @Output() newNote = new EventEmitter<Note>();
 
@@ -29,7 +29,7 @@ export class AddNoteComponent {
 
   submitForm() {
     if (this.noteForm.valid) {
-      this.moduleService.addNewNote(this.moduleId, this.noteForm.getRawValue()).subscribe(
+      this.moduleService.addNewNote(this.unitId, this.noteForm.getRawValue()).subscribe(
         (note) => {
           this.newNote.emit(note);
           this.noteForm.reset();

@@ -3,8 +3,9 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
 import { CreateModuleComponent } from './components/create-module/create-module.component';
 import { LoginComponent } from './components/login/login.component';
 import { ModuleGridComponent } from './components/module-grid/module-grid.component';
-import { NoteListComponent } from './components/note-list/note-list.component';
+import { ModuleComponent } from './components/module/module.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UnitListComponent } from './components/unit-list/unit-list.component';
 import { authGuard } from './guards/auth.guard';
 import { unauthGuard } from './guards/unauth.guard';
 
@@ -26,7 +27,12 @@ export const routes: Routes = [
     },
     {
         path: 'module/:moduleId',
-        component: NoteListComponent,
+        component: ModuleComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path: 'units/:moduleId',
+        component: UnitListComponent,
         canActivate: [authGuard]
     },
     {

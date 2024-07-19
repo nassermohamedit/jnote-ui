@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Module } from '../data/module.model';
 import { Note } from '../data/note.model';
+import { Unit } from '../data/unit.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,11 +23,19 @@ export class ModuleService {
     return this.http.post(this.apiUrl, module);
   }
 
-  getNotesInModule(moduleId: number): Observable<Note[]> {
-    return this.http.get<Note[]>(`${this.apiUrl}/${moduleId}/notes`);
+  getUnits(moduleId: number): Observable<Unit[]> {
+    return this.http.get<Unit[]>(`${this.apiUrl}/${moduleId}/units`)
   }
 
-  addNewNote(moduleId: number, note: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/${moduleId}`, note);
+  createUnit(moduleId: number, unit: Unit): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${moduleId}/units`, unit)
+  }
+
+  getNotesInUnit(unitId: number): Observable<Note[]> {
+    return this.http.get<Note[]>(`${this.apiUrl}/units/${unitId}/notes`);
+  }
+
+  addNewNote(unitId: number, note: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/units/${unitId}`, note);
   }
 }

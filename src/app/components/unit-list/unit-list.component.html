@@ -1,0 +1,6 @@
+<h2>Unit List</h2>
+<div class="note-list">
+    <app-unit *ngFor="let unit of units; let i = index"
+    [unit]="unit"
+    (selected)="onUnitSelected($event)"></app-unit>
+</div>

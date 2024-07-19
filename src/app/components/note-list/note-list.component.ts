@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Note } from '../../data/note.model';
 import { ModuleService } from '../../services/module.service';
 import { AddNoteComponent } from "../add-note/add-note.component";
@@ -13,25 +13,32 @@ import { NoteCardComponent } from '../note-card/note-card.component';
   templateUrl: './note-list.component.html',
   styleUrl: './note-list.component.css'
 })
-export class NoteListComponent implements OnInit {
+export class NoteListComponent implements OnInit, OnChanges {
+  
+  @Input() unitId: number = 1;
+  
   notes: Note[] = []
-  moduleId: number = 0;
 
-  constructor(private moduleService: ModuleService, private route: ActivatedRoute) { }
+  constructor(private moduleService: ModuleService) { }
+
+  loadNotes() {
+    if (!this.unitId) return
+    this.moduleService.getNotesInUnit(this.unitId).subscribe(
+      notes => {
+        this.notes = notes;
+      },
+      error => {
+        console.log('Error fetching notes', error);
+      }
+    )
+  }
 
   ngOnInit(): void {
-    const moduleId = this.route.snapshot.paramMap.get('moduleId');
-    if (moduleId) {
-      this.moduleId = parseInt(moduleId);
-      this.moduleService.getNotesInModule(this.moduleId).subscribe(
-        notes => {
-          this.notes = notes;
-        },
-        error => {
-          console.log('Error fetching notes', error);
-        }
-      )
-    }
+    this.loadNotes()
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.loadNotes()
   }
 
   addNewElement(note: Note) {
