@@ -17,6 +17,8 @@ export class ModuleGridComponent implements OnInit {
 
   modules: Module[] = [];
 
+  showNewModuleForm = false;
+
   constructor(private moduleService: ModuleService) {}
 
   ngOnInit(): void {
@@ -28,5 +30,9 @@ export class ModuleGridComponent implements OnInit {
           console.log('Failed to fetch modules', error);
         }
       )
+  }
+
+  onModuleCreated(module: Module) {
+    this.modules.unshift(module);
   }
 }

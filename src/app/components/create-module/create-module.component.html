@@ -1,17 +1,9 @@
-<h1>Create a new module</h1>
+<h1>Add  a new unit</h1>
 <form [formGroup]="moduleForm" (ngSubmit)="submitForm()" class="form-container">
-    <div class="form-group">
-        <label for="name">Name*</label>
-        <input id="name" type="text" formControlName="name" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label for="description">Description*</label>
-        <input id="description" type="text" formControlName="description" class="form-control" />
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create module</button>
-    </div>
-    <div *ngIf="error" class="error-message">
-        {{ error }}
+        <input id="name" type="text" placeholder="name" formControlName="name" />
+        <input id="description" type="text" placeholder="description" formControlName="description"/>
+    <div class="footer">
+        <button type="submit" class="add-button">Add unit</button>
+        <button type="button" class="cancel-button" (click)="this.hideMe.emit(true)">Cancel</button>
     </div>
 </form>

@@ -1,4 +1,10 @@
-<button routerLink='/create-module' routerLinkActive="active" class="green-button">New</button>
+<button class="green-button" (click)="showNewModuleForm=true">New</button>
 <div class="modules-grid">
     <app-module-card *ngFor="let module of modules" [module]="module" />
+</div>
+<div class="module-form" *ngIf="showNewModuleForm">
+    <app-create-module
+    (hideMe)="showNewModuleForm=false"
+    (newModule)="onModuleCreated($event)">
+</app-create-module>
 </div>

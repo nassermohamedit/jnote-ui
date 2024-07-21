@@ -22,3 +22,16 @@
     font-size: 20px;
     transition: background-color 0.3s ease;
 }
+
+.module-form {
+    width: 500px;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    padding: 20px;
+    box-shadow: 0 7px 14px 0 rgb(0, 0, 0, 0.2);
+}

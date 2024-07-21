@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Module } from '../../data/module.model';
 import { ModuleService } from '../../services/module.service';
 @Component({
   selector: 'app-create-module',
@@ -13,6 +14,10 @@ import { ModuleService } from '../../services/module.service';
 export class CreateModuleComponent {
 
   moduleForm: FormGroup;
+
+  @Output() newModule = new EventEmitter<Module>();
+
+  @Output() hideMe = new EventEmitter<boolean>()
 
   error: string = '';
 
@@ -26,8 +31,10 @@ export class CreateModuleComponent {
   submitForm() {
     if (this.moduleForm.valid) {
       this.moduleService.createModule(this.moduleForm.getRawValue()).subscribe(
-        () => {
-          this.router.navigateByUrl('/');
+        (response) => {
+          this.hideMe.emit(true);
+          this.newModule.emit(response);
+
         },
         (error) => {
           this.error =  'Failed to create module. Please try again.';
