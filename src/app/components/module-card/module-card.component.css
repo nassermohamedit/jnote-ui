@@ -1,22 +1,36 @@
 .module-card {
     padding: 16px;
     margin: 8px;
-    border-radius: 2px;
-    border:var(--solid-border);
-    background: transparent;
-    height: 150px;
+    border-radius: 5px;
+    border: var(--solid-border);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: calc(1.9rem * 2 + 1.2rem * 2 + 40px);
 }
 
-.module-card h3 {
-    font-size: 30px;
-    color: var(--title-color);
+.module-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    word-break: break-word;
+    line-height: 1.9rem;
+    --max-lines: 2;
+    max-height: calc(1.9rem * 2);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.module-card p {
-    color: var(--meta-color);
+.description {
+    margin-top: 10px;
+    font-size: 1em;
+    word-break: break-word;
+    line-height: 1.2rem;
+    --max-lines: 2;
+    max-height: calc(1.2rem * 2);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .module-card:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    background-color: var(--card-hover-color);
 }
