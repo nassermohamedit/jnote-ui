@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { AddNoteComponent } from './components/add-note/add-note.component';
-import { CreateModuleComponent } from './components/create-module/create-module.component';
 import { LoginComponent } from './components/login/login.component';
 import { ModuleGridComponent } from './components/module-grid/module-grid.component';
 import { ModuleComponent } from './components/module/module.component';
@@ -21,11 +19,6 @@ export const routes: Routes = [
         canActivate: [authGuard]
     },
     {
-        path: 'create-module',
-        component: CreateModuleComponent,
-        canActivate: [authGuard]
-    },
-    {
         path: 'module/:moduleId',
         component: ModuleComponent,
         canActivate: [authGuard]
@@ -33,11 +26,6 @@ export const routes: Routes = [
     {
         path: 'units/:moduleId',
         component: UnitListComponent,
-        canActivate: [authGuard]
-    },
-    {
-        path: 'add-note/to/:moduleId',
-        component: AddNoteComponent,
         canActivate: [authGuard]
     },
     {
