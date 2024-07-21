@@ -1,0 +1,9 @@
+<h1>Add  a new unit</h1>
+<form [formGroup]="unitForm" (ngSubmit)="addUnit()" class="form-container">
+        <input id="name" type="text" placeholder="name" formControlName="name" />
+        <input id="description" type="text" placeholder="description" formControlName="description"/>
+    <div class="footer">
+        <button type="submit" class="add-button">Add unit</button>
+        <button type="button" class="cancel-button" (click)="onCancelClicked()">Cancel</button>
+    </div>
+</form>

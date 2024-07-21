@@ -1,5 +1,51 @@
 :host {
+    width: 30%;
+    border-right: var(--solid-border);
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    width: 50%;
+}
+
+.unit-list-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    margin-bottom: 7px;
+}
+
+.section-title {
+    font-size: 25px;
+}
+
+.section-title h3 {
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.add-unit {
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.add-unit:hover {
+    background-color: var(--card-hover-color);
+}
+
+.unit-form {
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    padding: 20px;
+    box-shadow: 0 7px 14px 0 rgb(0, 0, 0, 0.2);
 }

@@ -2,19 +2,18 @@
     padding: 16px;
     margin: 8px;
     border-radius: 2px;
-    border: 1px solid var(--line-color);
+    border:var(--solid-border);
     background: transparent;
-    color: antiquewhite;
-    height: 200px;
+    height: 150px;
 }
 
 .module-card h3 {
-    color: #e6edf3;
     font-size: 30px;
+    color: var(--title-color);
 }
 
 .module-card p {
-    color: #8d96a0;
+    color: var(--meta-color);
 }
 
 .module-card:hover {

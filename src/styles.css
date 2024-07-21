@@ -1,36 +1,52 @@
 :root {
-    --line-color: rgb(255, 97, 6);
-    --background-color: #161b22;
-    --button-color: rgb(255, 97, 6);
-    --meta-color: rgb(255, 128, 0, 0.7);
+    --line-color: black;
+    --solid-border: 1px solid var(--line-color);
+    --background-color: white;
+    --button-color: green;
+    --meta-color: #3f3f3f;
     --text-font: "Roboto Mono", monospace;
+    --card-hover-color: #d7d7d7;
+    --logo-color: black;
+    --title-color: black;
+    --text-color: black;
+    
 }
 
 * {
     box-sizing: border-box;
+    font-family: var(--text-font);
 }
-
 
 html {
     height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-text-size-adjust: 100%;
 }
-
 
 body {
     height: 100%;
+    background-color: var(--background-color);
     width: 100%;
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--background-color);
-    font-family: 'Amethysta', sans-serif;
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
+    color: var(--text-color);
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--line-color);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+

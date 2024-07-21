@@ -17,7 +17,7 @@ export class AddNoteComponent {
   noteForm: FormGroup;
   error: string = '';
 
-  @Input() unitId!: number;
+  @Input() unitId: number = 0;
 
   @Output() newNote = new EventEmitter<Note>();
 

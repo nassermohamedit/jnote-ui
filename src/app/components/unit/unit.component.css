@@ -1,10 +1,12 @@
-:host {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--line-color);
+.unit-card {
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background: transparent;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.name {
-    color:antiquewhite;
-    font-size: 40px;
+.unit-card:hover {
+    background-color: var(--card-hover-color);
 }

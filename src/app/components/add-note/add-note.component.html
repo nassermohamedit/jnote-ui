@@ -1,14 +1,14 @@
-<form [formGroup]="noteForm" (ngSubmit)="submitForm()" class="note-form">
+<form [formGroup]="noteForm" (ngSubmit)="submitForm()" class="note-input">
     <textarea
         placeholder="Write a new note"
         formControlName="content"
-        class="input"
     ></textarea>
     <div class="form-footer">
-        <button type="button" class="image-upload" title="Add an image">📷</button>
-        <button type="submit">Add note</button>
+        <button type="submit" class="submit">Add note</button>
     </div>
     <div *ngIf="error" class="error-message">
         {{ error }}
     </div>
 </form>
+
+

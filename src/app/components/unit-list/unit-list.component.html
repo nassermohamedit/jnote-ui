@@ -1,6 +1,15 @@
-<h2>Unit List</h2>
-<div class="note-list">
-    <app-unit *ngFor="let unit of units; let i = index"
-    [unit]="unit"
-    (selected)="onUnitSelected($event)"></app-unit>
+<div class="unit-list-head">
+    <div class="section-title">
+        <h3>Units</h3>
+    </div>
+    <div class="options">
+        <div class="add-unit" (click)="formVisible = true">
+            <i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i>
+        </div>
+    </div>
+</div>
+<app-unit *ngFor="let unit of units; let i = index" [unit]="unit" (selected)="onUnitSelected($event)">
+</app-unit>
+<div class="unit-form" *ngIf="formVisible">
+    <app-add-unit [moduleId]="moduleId" (hideMe)="formVisible=!$event" (newUnit)="onUnitCreated($event)"></app-add-unit>
 </div>

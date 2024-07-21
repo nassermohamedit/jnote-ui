@@ -1,10 +1,10 @@
 .nav {
-    margin-bottom: 20px;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
-    border-bottom: 1px solid var(--line-color);
+    margin: 0;
+    padding: 3px;
+    border-bottom: var(--solid-border);
 }
 
 .logo {
@@ -12,7 +12,7 @@
     margin: 0;
     font-weight: bold;
     font-size: 40px;
-    color: rgb(255, 109, 47);
+    color: var(--logo-color);
 }
 nav ul li a:hover {
 }
