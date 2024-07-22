@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Unit } from '../../data/unit.model';
 import { NoteListComponent } from "../note-list/note-list.component";
 import { UnitListComponent } from "../unit-list/unit-list.component";
 import { UnitComponent } from "../unit/unit.component";
@@ -17,7 +18,7 @@ export class ModuleComponent {
   //@Input() module!: Module
   moduleId: number
   
-  selectedUnitId: number = 0
+  selectedUnit?: Unit = undefined;
 
   constructor(route: ActivatedRoute) {
     this.moduleId = Number(route.snapshot.paramMap.get('moduleId'))

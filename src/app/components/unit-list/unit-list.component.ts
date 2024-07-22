@@ -18,7 +18,7 @@ export class UnitListComponent implements OnInit {
   
   units: Unit[] = []
 
-  @Output() unitSelected = new EventEmitter<number>()
+  @Output() unitSelected = new EventEmitter<Unit>()
 
   formVisible = false
 
@@ -36,8 +36,8 @@ export class UnitListComponent implements OnInit {
     )
   }
 
-  onUnitSelected(unitId: number) {
-    this.unitSelected.emit(unitId)
+  onUnitSelected(unit: Unit) {
+    this.unitSelected.emit(unit)
   }
 
   onUnitCreated(unit: Unit) {

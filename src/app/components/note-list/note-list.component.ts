@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Note } from '../../data/note.model';
+import { Unit } from '../../data/unit.model';
 import { ModuleService } from '../../services/module.service';
 import { AddNoteComponent } from "../add-note/add-note.component";
 import { NoteCardComponent } from '../note-card/note-card.component';
@@ -15,15 +16,17 @@ import { NoteCardComponent } from '../note-card/note-card.component';
 })
 export class NoteListComponent implements OnInit, OnChanges {
   
-  @Input() unitId: number = 1;
+  @Input() unit!: Unit;
   
   notes: Note[] = []
+
+  editorVisible = false
 
   constructor(private moduleService: ModuleService) { }
 
   loadNotes() {
-    if (!this.unitId) return
-    this.moduleService.getNotesInUnit(this.unitId).subscribe(
+    if (!this.unit.id) return
+    this.moduleService.getNotesInUnit(this.unit.id).subscribe(
       notes => {
         this.notes = notes;
       },
@@ -48,4 +51,5 @@ export class NoteListComponent implements OnInit, OnChanges {
   removeElement(index: number) {
     this.notes.splice(index, 1);
   }
+
 }

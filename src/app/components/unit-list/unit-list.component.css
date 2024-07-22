@@ -1,5 +1,6 @@
 :host {
-    width: 30%;
+    max-width: 25%;
+    resize: horizontal;
     border-right: var(--solid-border);
     overflow-y: auto;
     display: flex;

@@ -1,5 +1,22 @@
-<div class="note-list">
-    <app-note-card *ngFor="let note of notes; let i = index" [note]="note" [index]="i"
-        (delete)="removeElement($event)"></app-note-card>
+<div class="note-list-head">
+    <div class="unit-info">
+        <div class="name">{{unit.name}}</div>
+        <div class="description">{{unit.description}}</div>
+    </div>
+    <div class="options">
+        <div class="ele">
+            <i class="fa-regular fa-circle-question fa-xl" style="color: #000000;"></i></div>
+        <div class="ele"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #000000;"></i></div>
+        <div class="ele" (click)="editorVisible = !editorVisible" ><i class="fa-solid fa-pen-to-square fa-xl" style="color: #000000;"></i></div>
+        
+    </div>
 </div>
-<app-add-note [unitId]="unitId" (newNote)="addNewElement($event)"></app-add-note>
+<div class="note-list-container">
+    <div class="note-list">
+        <app-note-card *ngFor="let note of notes; let i = index" [note]="note" [index]="i"
+            (delete)="removeElement($event)"></app-note-card>
+    </div>
+    <div class="new-note" *ngIf="editorVisible">
+        <app-add-note [unitId]="unit.id" (newNote)="addNewElement($event)"></app-add-note>
+    </div>
+</div>

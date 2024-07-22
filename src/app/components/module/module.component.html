@@ -1,2 +1,2 @@
-<app-unit-list [moduleId]="moduleId" (unitSelected)="selectedUnitId=$event"></app-unit-list>
-<app-note-list [unitId]="selectedUnitId"></app-note-list>
+<app-unit-list [moduleId]="moduleId" (unitSelected)="selectedUnit=$event"></app-unit-list>
+<app-note-list [unit]="selectedUnit!"></app-note-list>

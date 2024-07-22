@@ -11,9 +11,9 @@ import { Unit } from '../../data/unit.model';
 export class UnitComponent {
   @Input() unit!: Unit
 
-  @Output() selected = new EventEmitter<number>()
+  @Output() selected = new EventEmitter<Unit>()
 
   onUnitClicked() {
-    this.selected.emit(this.unit.id)
+    this.selected.emit(this.unit)
   }
 }

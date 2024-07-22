@@ -1,22 +1,75 @@
 :host {
-    width: 70%;
-    height: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+}
+
+.note-list-head {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    border-bottom: var(--solid-border);
+    justify-content: space-between;
+}
+
+.unit-info {
+    width: 40%;
+}
+
+.options {
+    display: flex;
+}
+
+.ele {
+    margin: 0px 13px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.ele:hover {
+    background: yellow;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: bold;
+    display: inline;
+    margin-right: 15px;
+}
+
+.description {
+    font-size: 15px;
+    color: var(--meta-color);
+    font-style: italic;
+    display: inline;
+}
+
+.note-list-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-bottom: 0;
+    overflow: auto;
 }
 
 .note-list {
-    height: 85%;
-    width: 85%;
+    width: 100%;
     overflow-y: auto;
-    padding: 0;
+    padding: 20px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: start;
     padding-right: 30px;
+    margin: 0px 20px;
 }
 
+.new-note {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    resize: horizontal;
+    overflow: auto;
+    border-bottom: var(--solid-border);
+}
 
