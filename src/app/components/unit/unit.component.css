@@ -5,6 +5,8 @@
     background: transparent;
     font-size: 22px;
     font-weight: bold;
+    border-bottom: var(--solid-border);
+    user-select: none;
 }
 
 .unit-card:hover {

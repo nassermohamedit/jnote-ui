@@ -10,14 +10,47 @@
     padding: 15px;
     border-bottom: var(--solid-border);
     justify-content: space-between;
+    background-color: var(--beta-back-col);
 }
 
 .unit-info {
-    width: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    user-select: none;
+}
+
+.name {
+    max-width: 100%;
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: 13px;
+    display: flex;
+    line-height: 1.7rem;
+    max-height: calc(2 * 1.7rem);
+    --max-lines: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description {
+    max-width: 50%;
+    font-size: 15px;
+    color: var(--meta-color);
+    font-style: italic;
+    line-height: 1.2rem;
+    max-height: calc(2 * 1.2rem);
+    --max-lines: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .options {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ele {
@@ -28,20 +61,6 @@
 
 .ele:hover {
     background: yellow;
-}
-
-.name {
-    font-size: 26px;
-    font-weight: bold;
-    display: inline;
-    margin-right: 15px;
-}
-
-.description {
-    font-size: 15px;
-    color: var(--meta-color);
-    font-style: italic;
-    display: inline;
 }
 
 .note-list-container {
@@ -70,6 +89,5 @@
     display: flex;
     resize: horizontal;
     overflow: auto;
-    border-bottom: var(--solid-border);
 }
 

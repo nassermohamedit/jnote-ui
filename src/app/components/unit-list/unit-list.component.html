@@ -8,8 +8,10 @@
         </div>
     </div>
 </div>
-<app-unit *ngFor="let unit of units; let i = index" [unit]="unit" (selected)="onUnitSelected($event)">
-</app-unit>
+<div class="unit-list">
+    <app-unit *ngFor="let unit of units; let i = index" [unit]="unit" (selected)="onUnitSelected($event)">
+    </app-unit>
+</div>
 <div class="unit-form" *ngIf="formVisible">
     <app-add-unit [moduleId]="moduleId" (hideMe)="formVisible=!$event" (newUnit)="onUnitCreated($event)"></app-add-unit>
 </div>

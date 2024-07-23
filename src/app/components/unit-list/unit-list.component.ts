@@ -29,6 +29,7 @@ export class UnitListComponent implements OnInit {
     this.moduleService.getUnits(this.moduleId).subscribe(
       units => {
         this.units = units
+        this.unitSelected.emit(this.units[0])
       },
       error => {
         console.log(error)

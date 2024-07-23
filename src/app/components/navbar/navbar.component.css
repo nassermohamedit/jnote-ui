@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-right: var(--solid-border);
+    background-color: var(--beta-back-col);
 }
 
 .nav a {

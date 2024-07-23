@@ -1,18 +1,25 @@
 :host {
+    width: 30%;
     max-width: 25%;
-    resize: horizontal;
     border-right: var(--solid-border);
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    resize: horizontal;
 }
 
 .unit-list-head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px;
-    margin-bottom: 7px;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--beta-back-col);
+    user-select: none;
+}
+
+.unit-list {
+    overflow-y: auto;
 }
 
 .section-title {
