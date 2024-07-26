@@ -1,6 +1,7 @@
 :host {
 }
 
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -8,12 +9,17 @@
     padding: 10px;
 }
 
-.form-container input {
+input {
     margin: 10px;
     font-size: 20px;
     border: none;
     outline: none;
     border-bottom: var(--solid-border);
+    background: inherit;
+}
+
+input::placeholder {
+    color: black;
 }
 
 .footer {
@@ -31,17 +37,8 @@
 
 }
 
-.add-button {
-    border: none;
-    background: rgb(149, 255, 149);
-}
-
-.add-button:hover {
-    background: rgb(33, 255, 33);
-}
-
 .cancel-button {
-    background: white;
+    background: inherit;
 }
 
 .cancel-button:hover {

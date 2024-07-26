@@ -3,6 +3,7 @@
     height: 100%;
     padding: 10px;
     border-left: var(--solid-border);
+    background: linear-gradient(to bottom left, #446352, #9cc397);;
 }
 
 .note-input {
@@ -14,17 +15,20 @@
     display: flex;
 }
 
-.note-input textarea {
+textarea {
     height: 100%;
     width: 100%;
     padding: 10px;
     font-size: 17px;
-    color: var(--text-color);
+    color: black;
     border: none;
     outline: none;
     resize: none;
-    border-bottom: var(--solid-border);
-    background: rgb(244, 244, 244);
+    background: transparent;
+}
+
+textarea::placeholder {
+    color: black;
 }
 
 .form-footer {
@@ -34,17 +38,6 @@
     justify-content: end;
 }
 
-.submit {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    margin: 7px;
-    border: none;
-    background: rgb(149, 255, 149);
-}
-
 .submit:hover {
-    background: rgb(33, 255, 33);
+    background: springgreen;
 }

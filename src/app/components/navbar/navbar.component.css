@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: var(--solid-border);
+    box-shadow: var(--shadow-line);
     background-color: var(--beta-back-col);
 }
 

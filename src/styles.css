@@ -1,20 +1,45 @@
+@import './fonts.css';
+
+
 :root {
     --line-color: black;
-    --solid-border: 1px solid var(--line-color);
-    --background-color: white;
-    --button-color: green;
-    --meta-color: #3f3f3f;
-    --text-font: "Roboto Mono", monospace;
-    --card-hover-color: #d7d7d7;
+    --solid-border: 3px solid var(--line-color);
+    --shadow-line: 3px 3px 0 0 #363f40;
+    --background-color: #446352;
+    --beta-back-col: #446352;
+    --button-color: rgb(149, 255, 149);
+    --meta-color: rgb(28, 28, 28);
+    --text-font: JetBrains, monospace;
+    --card-hover-color: rgb(131, 185, 131);
     --logo-color: black;
-    --title-color: black;
+    --title-color: white;
     --text-color: black;
     
 }
-
 * {
     box-sizing: border-box;
     font-family: var(--text-font);
+}
+
+a {
+    color: rgb(0, 255, 128);
+}
+
+button {
+    background-color: var(--button-color);
+    color: black;
+    padding: 10px 20px;
+    margin: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: springgreen;
 }
 
 html {
@@ -25,6 +50,9 @@ html {
 body {
     height: 100%;
     background-color: var(--background-color);
+    background: linear-gradient(to top right, #446352, #9cc397);
+
+
     width: 100%;
     margin: 0;
     padding: 0;
@@ -39,7 +67,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: white;
+    background: var(--beta-back-col);
 }
 
 ::-webkit-scrollbar-thumb {

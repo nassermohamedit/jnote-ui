@@ -5,8 +5,12 @@
     background: transparent;
     font-size: 22px;
     font-weight: bold;
-    border-bottom: var(--solid-border);
+    box-shadow: var(--shadow-line);
     user-select: none;
+    line-height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: calc(1.5rem '.>>>..');
 }
 
 .unit-card:hover {

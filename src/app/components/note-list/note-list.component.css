@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    
 }
 
 .note-list-head {
     width: 100%;
     display: flex;
     padding: 15px;
-    border-bottom: var(--solid-border);
+    box-shadow: var(--shadow-line);
     justify-content: space-between;
     background-color: var(--beta-back-col);
 }
@@ -78,8 +79,9 @@
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding-right: 30px;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
     margin: 0px 20px;
 }
 

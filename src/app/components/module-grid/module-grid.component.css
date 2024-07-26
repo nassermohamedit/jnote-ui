@@ -11,21 +11,13 @@
 }
 
 .green-button {
-    padding: 10px 20px;
-    margin: 20px;
-    background-color: var(--button-color);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: background-color 0.3s ease;
+
 }
 
 .module-form {
     width: 500px;
-    background: white;
+    background: linear-gradient(to top right, #446352, #9cc397);
+
     position: fixed;
     top: 50%;
     left: 50%;
