@@ -4,9 +4,9 @@
 :root {
     --line-color: black;
     --solid-border: 3px solid var(--line-color);
-    --shadow-line: 3px 3px 0 0 #0e1b20;
+    --shadow-line: 1px 1px 1px 1px #0e1b20;
     --background-color: #193360;
-    --beta-back-col: #193360;
+    --beta-back-col: #152b51;
     --button-color: rgb(149, 255, 149);
     --meta-color: rgb(202, 202, 202);
     --text-font: JetBrains, monospace;

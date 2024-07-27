@@ -1,2 +1,13 @@
-<app-unit-list [moduleId]="moduleId" (unitSelected)="selectedUnit=$event"></app-unit-list>
+<div class="module">
+    <div class="head">
+        <h2 class="name">{{module!.name}}</h2>
+        <div class="options">
+            <i class="fa-solid fa-plus fa-xl" (click)="formVisible=true"></i>
+        </div>
+    </div>
+    <app-unit-list [moduleId]="moduleId" [newUnit]="newUnit" (unitSelected)="selectedUnit=$event"></app-unit-list>
+</div>
 <app-note-list [unit]="selectedUnit!"></app-note-list>
+<div class="unit-form" *ngIf="formVisible">
+    <app-add-unit [moduleId]="moduleId" (hideMe)="formVisible=!$event" (newUnit)="newUnit=$event"></app-add-unit>
+</div>

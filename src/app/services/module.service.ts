@@ -15,6 +15,11 @@ export class ModuleService {
 
   constructor(private http: HttpClient) {}
 
+  getModule(id: number): Observable<Module> {
+    return this.http.get<Module>(`${this.apiUrl}/${id}`);
+
+  }
+
   getModules(): Observable<Module[]> {
     return this.http.get<Module[]>(this.apiUrl);
   }
