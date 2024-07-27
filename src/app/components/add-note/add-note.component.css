@@ -1,9 +1,8 @@
 :host {
+    padding-top: 10px;
     width: 100%;
     height: 100%;
-    padding: 10px;
-    border-left: var(--solid-border);
-    background: linear-gradient(to bottom left, #446352, #9cc397);;
+    padding: 0px 10px;
 }
 
 .note-input {
@@ -18,9 +17,9 @@
 textarea {
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: 17px;
-    color: black;
+    color: white;
     border: none;
     outline: none;
     resize: none;
@@ -28,7 +27,7 @@ textarea {
 }
 
 textarea::placeholder {
-    color: black;
+    color: white;
 }
 
 .form-footer {
@@ -38,6 +37,6 @@ textarea::placeholder {
     justify-content: end;
 }
 
-.submit:hover {
-    background: springgreen;
+.submit {
+    margin: 10px 4px;
 }

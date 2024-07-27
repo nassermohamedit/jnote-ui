@@ -14,10 +14,9 @@
 
 }
 
-.module-form {
+.form {
     width: 500px;
-    background: linear-gradient(to top right, #446352, #9cc397);
-
+    background: #193360;
     position: fixed;
     top: 50%;
     left: 50%;

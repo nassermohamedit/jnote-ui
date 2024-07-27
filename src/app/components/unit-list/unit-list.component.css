@@ -45,11 +45,10 @@
 }
 
 .add-unit:hover {
-    background-color: var(--card-hover-color);
 }
 
 .unit-form {
-    background: linear-gradient(to bottom left, #446352, #9cc397);
+    background: var(--background-color);
     position: fixed;
     top: 50%;
     left: 50%;
