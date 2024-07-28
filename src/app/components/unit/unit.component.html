@@ -1,3 +1,9 @@
 <div class="unit-card" (click)="onUnitClicked()">
-    {{unit.name}}
+    <div class="name">{{unit.name}}</div>
+    <div class="dropdown">
+        <button class="dropdown-icon" (click)="menuOpen=!menuOpen">&#x22EE;</button>
+        <div class="dropdown-menu" *ngIf="menuOpen">
+            <div class="dropdown-item" (click)="deleteUnit()">Delete</div>
+        </div>
+    </div>
 </div>

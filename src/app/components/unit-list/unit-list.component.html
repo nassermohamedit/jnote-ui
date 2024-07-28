@@ -1,4 +1,4 @@
 <div class="unit-list">
-    <app-unit *ngFor="let unit of units; let i = index" [unit]="unit" (selected)="onUnitSelected($event)">
+    <app-unit *ngFor="let unit of units; let i = index" [unit]="unit" [index]="i" (selected)="onUnitSelected($event)" (deleted)="units.splice($event, 1)">
     </app-unit>
 </div>
